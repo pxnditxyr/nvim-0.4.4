@@ -1,0 +1,42 @@
+snippet tempc "Template react div" i
+import React from 'react'
+
+export const ${1:ClassName} = ($2) => {
+	return (
+		<div className="${3:className}">
+			$4
+		</div>
+	);
+}
+endsnippet
+
+snippet temp "Template react" i
+import React from 'react'
+
+export const ${1:ClassName} = ($2) => {
+	return (
+		$4
+	);
+}
+endsnippet
+
+snippet useState "Use State Hook" i
+const [${1:state}, set$1] = useState($2);
+endsnippet
+
+snippet arrow "Arrow Function" i
+const ${1:functionName} = ($2) : void => {
+	$3
+}
+endsnippet
+
+snippet impc "Import Component" i
+import { ${1:ComponentName} } from './components/$1'
+$2
+endsnippet
+
+snippet < "label" i
+<$1> $2 </$1>
+endsnippet
+
+

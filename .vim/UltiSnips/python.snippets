@@ -1,0 +1,81 @@
+snippet np "Import numpy" i
+import numpy as np
+$1
+endsnippet
+
+snippet pd "Import pandas" i
+import pandas as pd
+$1
+endsnippet
+
+snippet fori "For in range" i
+for ${1:i} in range(${2:n}):
+	$3
+endsnippet
+
+snippet pr "Print" i
+print( "$1" )
+endsnippet
+
+snippet class "Class" i
+class ${1:ClassName}:
+	def __init__(self):
+		$2
+endsnippet
+
+snippet main "Main" i
+def main($1):
+	$2
+if __name__ == "__main__":
+	main($1)
+endsnippet
+
+snippet def "Function" i
+def ${1:FunctionName}($2):
+	${3:pass}
+endsnippet
+
+snippet defr "Funcition that return" i
+def ${1:FunctionName}($2):
+	${3:pass}
+	return $4
+endsnippet
+
+snippet if> "If >" i
+if ${1:a} > ${2:b}:
+	$3
+endsnippet
+
+snippet if< "if <" i
+if ${1:a} < ${2:b}:
+	$3
+endsnippet
+
+snippet if>= "if >=" i
+if ${1:a} >= ${2:b}:
+	$3
+endsnippet
+
+snippet if<= "if <=" i
+if ${1:a} <= ${2:b}:
+	$3
+endsnippet
+
+snippet ifand "if and" i
+if ${1:a} and ${2:b}:
+	$3
+endsnippet
+
+snippet ifor "if or" i
+if ${1:a} or ${2:b}:
+	$3
+endsnippet
+
+snippet if= "if ==" i
+if ${1:a} == ${2:b}:
+	$3
+endsnippet
+
+snippet prf "Print f" i
+print(f"$1 {$2}")
+endsnippet

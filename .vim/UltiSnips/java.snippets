@@ -1,0 +1,312 @@
+snippet temp "Class" i
+public class ${1:ClassName} {
+
+	public $1 ($2) {
+		$3
+	}
+
+	public static void main (String[] args) {
+		$4
+	}
+}
+endsnippet
+
+snippet class "Class" i
+public class ${1:ClassName} {
+
+	public $1 ($2) {
+		$3
+	}
+}
+endsnippet
+
+snippet static "Static Class" i
+public class ${1:ClassName} {
+
+	public static void main (String[] args) {
+		$2
+	}
+}
+endsnippet
+
+snippet main "Main" i
+public static void main (String[] args) {
+	$1
+}
+endsnippet
+
+
+
+snippet sout "sout" i
+System.out.println("$1" + $2);
+endsnippet
+
+snippet void "Void" i
+public ${1:void} ${2:methodName} ($3) {
+	$4
+}
+endsnippet
+
+snippet pr "Println" i
+System.out.println("$1");
+endsnippet
+
+snippet fori "For i" i
+for (int ${1:i} = 0; $1 < ${2:vector.length}; $1++) {
+	$3
+}
+endsnippet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+snippet classLeer "Leer Class" i
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Leer {
+	public static String dato() {
+		String sdato = "";
+		try {
+			InputStreamReader isr = new InputStreamReader(System.in);
+			BufferedReader flujoE = new BufferedReader(isr);
+			sdato = flujoE.readLine();
+		}
+		catch(IOException e) {
+			System.err.println("Error: " + e.getMessage());
+		}
+		return sdato;
+	}
+
+	public static short datoShort() {
+		try {
+			return Short.parseShort(dato());
+		}
+		catch(NumberFormatException e) {
+			return Short.MIN_VALUE;
+		}
+	}
+
+	public static int datoInt() {
+		try {
+			return Integer.parseInt(dato());
+		}
+		catch(NumberFormatException e) {
+			return Integer.MIN_VALUE;
+		}
+	}
+
+	public static long datoLong() {
+		try {
+			return Long.parseLong(dato());
+		}
+		catch(NumberFormatException e) {
+				return Long.MIN_VALUE;
+		}
+	}
+
+	public static float datoFloat() {
+		try {
+			Float f = new Float(dato());
+			return f.floatValue();
+		}
+		catch(NumberFormatException e) {
+			return Float.NaN;
+		}
+	}
+	
+	public static double datoDouble() {
+		try {
+			Double d = new Double(dato());
+			return d.doubleValue();
+		}
+		catch(NumberFormatException e) {
+			return Double.NaN;
+		}
+	}
+}
+endsnippet
+
+snippet operList "Lista enlazada Operaciones" i
+public class Operaciones {
+
+	public void insertarN (Lista lista) {
+		System.out.println("No. nodos= ");
+		int n = Leer.datoInt();
+		int d;
+		for (int i = 1; i <= n;i++) {
+			System.out.print("Dato= ");
+			d = Leer.datoInt();
+			lista.insertar(d);
+		}
+	}
+
+	public void mostrar (Lista lista) {
+		Nodo p = lista.primero;
+		while (p != null) {
+			System.out.println(p.dato);
+			p = p.sig;
+		}
+	}
+
+
+	public void insertarFin (Lista lista, int x) {
+		if (lista.listaVacia()) {
+			lista.insertar(x);
+		} else {
+			Nodo p = lista.primero;
+			while (p.sig != null) {
+				p = p.sig;
+			}
+			lista.insertar2(x, p);
+		}
+	}
+
+	public void eliminarDado (Lista lista, int d) {
+		if (!lista.listaVacia()) {
+			if (lista.primero.dato==d) {
+				lista.eliminar();
+			} else {
+				Nodo p = lista.primero;
+				while (p.sig != null && p.sig.dato != d) {
+					p = p.sig;
+				}
+				if(p.sig != null) {
+					lista.eliminar2(p);
+				}
+			}
+		}
+	}
+}
+endsnippet
+
+snippet classVehiculo "Vehiculo Class" i
+public class Vehiculo {
+
+	String placa, marca;
+	int modelo;
+
+	public Vehiculo() {
+		placa  = null;
+		marca  = null;
+		modelo = 0;
+	}
+	public void leer() {
+		System.out.print("Placa  = ");
+		placa = Leer.dato();
+		System.out.print("Marca  = ");
+		marca = Leer.dato();
+		System.out.print("Modelo = ");
+		modelo = Leer.datoInt();
+	}
+	public void mostrar() {
+		System.out.println("-------------------------");
+		System.out.println("Placa  = " + placa );
+		System.out.println("Marca  = " + marca );
+		System.out.println("Modelo = " + modelo);
+		System.out.println("-------------------------");
+	}
+}
+endsnippet
+
+snippet classQueueArr "Class Queue array" i
+public class Cola {
+
+	int frente, fin;
+	double[] elem;
+	final int MAX = 50;
+
+	public Cola () {
+		frente = fin = MAX;
+		elem = new double[MAX + 1];
+	}
+
+	public boolean colaVacia () {
+		return frente == fin;
+	}
+
+	public boolean colaLlena () {
+		int sigfin;
+		if (fin == MAX)
+			sigfin = 1;
+		else
+			sigfin = fin + 1;
+		return sigfin == frente ;
+	}
+
+	public double ver () {
+		if (frente == MAX)
+			return elem[1];
+		else
+			return elem[frente + 1];
+	}
+
+	public void eliminar () {
+		if ( !colaVacia() ) {
+			if (frente == MAX)
+				frente = 1;
+			else
+				frente = frente + 1;
+		}
+	}
+
+	public void insertar (double dato) {
+		if ( !colaLlena() ) {
+			if (fin == MAX)
+				fin = 1 ;
+			else
+				fin = fin + 1;
+			elem[fin] = dato;
+		}
+	}
+}
+endsnippet
+
+snippet classOperQueue "Class Operaciones Queue" i
+class Operaciones{
+
+	public Cola insertarN(Cola cola) {
+
+		System.out.print("N° elementos: ");
+		int n = Leer.datoInt();
+		double dato;
+		for(int i = 1; i <= n && (!cola.colaLlena()); i++) {
+			System.out.print("dato " + i + ": " );
+			dato = Leer.datoDouble();
+			cola.insertar(dato);
+		}
+		return cola;
+	}
+
+	public Cola mostrar(Cola cola) {
+
+		Cola colaux = new Cola();
+		colaux.frente = cola.frente;
+		colaux.fin = cola.frente;
+		double dato;
+
+		while(!cola.colaVacia()) {
+			dato = cola.ver();
+			System.out.println(dato);
+			cola.eliminar();
+			colaux.insertar(dato);
+		}
+		return colaux;
+	}
+}
+endsnippet

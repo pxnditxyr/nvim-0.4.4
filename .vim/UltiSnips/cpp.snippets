@@ -1,0 +1,35 @@
+snippet temp "Template C++" i
+#include<iostream>
+$1
+using namespace std;
+
+int main()
+{
+	$2
+	return 0;
+}
+endsnippet
+
+snippet inc "Include c++" i
+#include<${1:bits/stdc++}.h>
+endsnippet
+
+snippet incf "Include c++" i
+#include<iomanip>
+endsnippet
+
+snippet coutl "Print Cout c++" i
+cout << "${1:Text}" << endl;
+endsnippet
+
+snippet coutf "Print fixed" i
+cout << fixed << setprecision(${1:3}) << "${2:Text}" << endl;
+endsnippet
+
+snippet cout "Print" i
+cout << "${1:Text}";
+endsnippet
+
+snippet cin "Cin" i
+cin >> ${1:a};
+endsnippet

@@ -1,0 +1,6 @@
+pack
+kite-installer
+.vim/plugged/
+.vim/pack/
+.vim/kite-installer
+pack/

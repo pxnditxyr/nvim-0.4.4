@@ -1,0 +1,22 @@
+snippet live "Live server react" i
+CHOKIDAR_USEPOLLING=true
+endsnippet
+
+snippet deltf "Delete files"
+find . -name "*.${1:class}" -type f -delete
+endsnippet
+
+snippet delrun "Delete and run" i
+find . -name "*.${1:class}" -type f -delete
+javac Principal.java
+java Principal
+endsnippet
+
+snippet temphtml "Create all files html page" i
+mkdir assets assets/js assets/css
+touch assets/js/index.js assets/css/index.css index.html
+endsnippet
+
+snippet crqueue "Create Queue Java" i
+touch Cola.java Leer.java Principal.java Operaciones.java
+endsnippet

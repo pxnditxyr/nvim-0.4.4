@@ -1,0 +1,28 @@
+snippet temp "Template Default" i
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./assets/css/${1:index}.css">
+		<title> $2 </title>
+	</head>
+	<body>
+		$3
+		<script src="./assets/js/index.js"></script>
+	</body>
+</html>
+endsnippet
+
+snippet rel "Link" i
+<link rel="stylesheet" href="./assets/css/${1:style}.css">
+endsnippet
+
+snippet div "Div class" i
+<div class="$1"> $2 </div>
+endsnippet
+
+snippet script "Script" i
+<script src="./assets/js/${1:index}.js"></script>
+endsnippet
