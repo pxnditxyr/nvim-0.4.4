@@ -1,3 +1,6 @@
+snippet c "Const" i
+const $1;
+endsnippet
 snippet div "Div JSX" i
 <div className="${1:ClassName}"> $2 </div>
 endsnippet
@@ -52,4 +55,10 @@ snippet arrow "Arrow Function" i
 const ${1:functionName} = ($2) => {
 	$3
 };
+endsnippet
+
+snippet test "New Test" i
+test( "${1:Decription of test}", ($2) => {
+	$3
+});
 endsnippet

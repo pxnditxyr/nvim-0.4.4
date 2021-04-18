@@ -13,7 +13,7 @@ nnoremap <Leader>< 10<C-w><
 nnoremap <Leader>; $a;<Esc>
 
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :wq<cr>
+nnoremap <Leader>q :q<cr>
 nnoremap <Leader>xx :q!<cr>
 
 " shorter commands
@@ -24,7 +24,8 @@ cnoreabbrev diff Gdiff
 
 " plugs
 "map <Leader>nt :NERDTreeFind<CR>
-nmap <Leader>nt :NERDTreeFocus<cr>R<c-w><c-p>
+nmap <Leader>nt :NERDTreeFocus<cr>R<c-w><c-p><c-h>
+
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
 
