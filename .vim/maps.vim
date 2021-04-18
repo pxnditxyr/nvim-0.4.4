@@ -24,7 +24,7 @@ cnoreabbrev diff Gdiff
 
 " plugs
 "map <Leader>nt :NERDTreeFind<CR>
-nmap <Leader>nt :NERDTreeFocus<cr>R<c-w><c-p><c-h>
+nmap <Leader>nt :NERDTreeFocus<cr>R<c-w><c-p><c-h>j
 
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
