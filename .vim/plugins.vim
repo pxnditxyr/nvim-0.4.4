@@ -68,4 +68,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Coments
 Plug 'tpope/vim-commentary'
 
+" Move Lines
+Plug 'matze/vim-move'
+
 call plug#end()
