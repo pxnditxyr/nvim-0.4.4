@@ -121,5 +121,5 @@ nnoremap <C-t> :call OpenTerminal()<CR>
 let g:multi_cursor_select_all_key      = 'g<A-n>'
 
 " Move Lines
-let g:move_key_modifier = 'C'
+let g:move_key_modifier = 'A'
 
