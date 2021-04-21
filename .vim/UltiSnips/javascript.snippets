@@ -41,6 +41,10 @@ snippet import "Import" i
 import { ${1:NameImport} } from './${2:path}';
 endsnippet
 
+snippet impComp "Import" i
+import { ${1:ComponentName} } from './components/$1';
+endsnippet
+
 snippet des "Describe and test" i
 describe( "$1", () => {
 	test( "$2", () => {
