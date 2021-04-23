@@ -3,4 +3,5 @@ kite-installer
 .vim/plugged/
 .vim/pack/
 .vim/kite-installer
+win32yank.exe
 pack/

@@ -20,7 +20,7 @@ set numberwidth=1 "better show the numbers
 set mouse=a
 
 "enable copy and paste 'yy, p'
-set clipboard=unnamed
+" set clipboard=unnamed
 
 "shows the pressed
 set showcmd
@@ -70,3 +70,18 @@ filetype plugin indent on
 "Encoding
 set encoding=utf-8
 
+" For wsl
+set clipboard+=unnamedplus
+
+let g:clipboard = {
+      \   'name': 'win32yank-wsl',
+      \   'copy': {
+      \      '+': 'win32yank.exe -i --crlf',
+      \      '*': 'win32yank.exe -i --crlf',
+      \    },
+      \   'paste': {
+      \      '+': 'win32yank.exe -o --lf',
+      \      '*': 'win32yank.exe -o --lf',
+      \   },
+      \   'cache_enabled': 0,
+      \ }
