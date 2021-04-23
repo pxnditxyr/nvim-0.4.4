@@ -70,9 +70,8 @@ filetype plugin indent on
 "Encoding
 set encoding=utf-8
 
-" For wsl
 set clipboard+=unnamedplus
-
+" Termux Clipboard
 au TextYankPost * call system('termux-clipboard-set &', @")
 function Paste(p)
     let sysclip=system('termux-clipboard-get')
@@ -84,6 +83,8 @@ endfunction
 noremap <expr> p Paste('p')
 noremap <expr> P Paste('P')
 
+" For wsl
+"
 " let g:clipboard = {
 "       \   'name': 'win32yank-wsl',
 "       \   'copy': {
