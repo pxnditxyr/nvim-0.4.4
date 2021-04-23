@@ -73,15 +73,26 @@ set encoding=utf-8
 " For wsl
 set clipboard+=unnamedplus
 
-let g:clipboard = {
-      \   'name': 'win32yank-wsl',
-      \   'copy': {
-      \      '+': 'win32yank.exe -i --crlf',
-      \      '*': 'win32yank.exe -i --crlf',
-      \    },
-      \   'paste': {
-      \      '+': 'win32yank.exe -o --lf',
-      \      '*': 'win32yank.exe -o --lf',
-      \   },
-      \   'cache_enabled': 0,
-      \ }
+au TextYankPost * call system('termux-clipboard-set &', @")
+function Paste(p)
+    let sysclip=system('termux-clipboard-get')
+    if sysclip != @"
+        let @"=sysclip
+    endif
+    return a:p
+endfunction
+noremap <expr> p Paste('p')
+noremap <expr> P Paste('P')
+
+" let g:clipboard = {
+"       \   'name': 'win32yank-wsl',
+"       \   'copy': {
+"       \      '+': 'win32yank.exe -i --crlf',
+"       \      '*': 'win32yank.exe -i --crlf',
+"       \    },
+"       \   'paste': {
+"       \      '+': 'win32yank.exe -o --lf',
+"       \      '*': 'win32yank.exe -o --lf',
+"       \   },
+"       \   'cache_enabled': 0,
+"       \ }
