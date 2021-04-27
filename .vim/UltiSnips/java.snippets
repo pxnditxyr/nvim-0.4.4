@@ -20,7 +20,7 @@ public class ${1:ClassName} {
 }
 endsnippet
 
-snippet static "Static Class" i
+snippet staticClass "Static Class" i
 public class ${1:ClassName} {
 
 	public static void main (String[] args) {
@@ -307,6 +307,59 @@ class Operaciones{
 			colaux.insertar(dato);
 		}
 		return colaux;
+	}
+}
+endsnippet
+
+snippet classNodo "Class Nodo" i
+class Nodo {
+
+	double dato;
+	Nodo sig;
+
+	public Nodo () {
+		dato = 0;
+		sig = null;
+	}
+
+	public Nodo (int dato) {
+		this.dato = dato;
+		sig = null;
+	}
+}
+endsnippet
+
+snippet classQueue "Class Queue List" i
+class Cola {
+
+	Nodo frente, fin;
+
+	public Cola () {
+		frente = fin = null;
+	}
+
+	public boolean colaVacia () {
+		return (frente == null) && (fin == null);
+	}
+
+	public int ver () {
+		return frente.dato;
+	}
+	public void eliminar () {
+		if (!colaVacia()) {
+			if(frente== fin)
+				frente=null; fin = null;
+			else
+				frente = frente.sig;
+		}
+	}
+
+	public void insertar (int x) {
+		Nodo nuevo = new Nodo(x);
+		if (colaVacia())
+			frente=nuevo; fin=nuevo;
+		else
+			fin.sig = nuevo; fin = nuevo;
 	}
 }
 endsnippet

@@ -18,16 +18,16 @@ snippet incf "Include c++" i
 #include<iomanip>
 endsnippet
 
-snippet coutl "Print Cout c++" i
+snippet pr "Print Cout c++" i
 cout << "${1:Text}" << endl;
 endsnippet
 
 snippet coutf "Print fixed" i
-cout << fixed << setprecision(${1:3}) << "${2:Text}" << endl;
+cout << fixed << setprecision(${1:3}) << "${2:Text}" << $3 << endl;
 endsnippet
 
-snippet cout "Print" i
-cout << "${1:Text}";
+snippet cout "Prin with value" i
+cout << "${1:Text}" << $2 << endl;
 endsnippet
 
 snippet cin "Cin" i
