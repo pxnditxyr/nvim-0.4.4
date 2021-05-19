@@ -2,6 +2,8 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 
+set langmap='q,\\,w,.e,pr,yt,fy,gu,ci,ro,lp,/[,=],aa,os,ed,uf,ig,dh,hj,tk,nl,s\\;,-',\\;z,qx,jc,kv,xb,bn,mm,w\\,,v.,z/,[-,]=,\"Q,<W,>E,PR,YT,FY,GU,CI,RO,LP,?{,+},AA,OS,ED,UF,IG,DH,HJ,TK,NL,S:,_\",:Z,QX,JC,KV,XB,BN,MM,W<,V>,Z?
+
 "files
 so ~\.config/nvim/.vim/plugins.vim
 so ~\.config/nvim/.vim/plugin-config.vim
@@ -19,9 +21,6 @@ set numberwidth=1 "better show the numbers
 "copy and paste with the mouse
 set mouse=a
 
-"enable copy and paste 'yy, p'
-" set clipboard=unnamed
-
 "shows the pressed
 set showcmd
 
@@ -30,6 +29,10 @@ set ruler
 
 "perform indent
 set smartindent
+
+"New
+set cursorline
+" set sw=2
 
 "does not create external files
 set noswapfile
@@ -49,10 +52,17 @@ set ignorecase
 "tab of 4 spaces
 set noexpandtab
 set tabstop=4 shiftwidth=4
+
 "Scheme
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
-"set background=dark
+colorscheme OceanicNext
+
+if (has("termguicolors"))
+	set termguicolors
+endif
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+let g:airline_theme='oceanicnext'
+" let g:gruvbox_contrast_dark = "hard"
 
 "highlight Normal ctermbg=NONE
 set laststatus=2

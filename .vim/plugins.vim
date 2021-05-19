@@ -71,4 +71,7 @@ Plug 'tpope/vim-commentary'
 " Move Lines
 Plug 'matze/vim-move'
 
+" New theme
+Plug 'mhartington/oceanic-next'
+
 call plug#end()

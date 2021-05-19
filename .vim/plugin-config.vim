@@ -19,7 +19,7 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head',
       \   'kitestatus': 'kite#statusline'
       \ },
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'oceanicnext',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''

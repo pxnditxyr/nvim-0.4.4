@@ -74,6 +74,8 @@ nnoremap <Leader>to :!touch
 nnoremap <Leader>nd :!node %<cr>
 nnoremap <Leader>py :!python3 %<cr>
 nnoremap <Leader>ja :!java %<cr>
+nnoremap <Leader>gcc :!g++ % -o main<cr>
+nnoremap <Leader>runc :!g++ ./main<cr>
 nnoremap <Leader>py2 :!python2 %<cr>
 
 "Copy all
