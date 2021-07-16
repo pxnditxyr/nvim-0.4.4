@@ -71,6 +71,7 @@ nnoremap <Leader>gl :Gpull<cr>
 
 nnoremap <Leader>mk :!mkdir 
 nnoremap <Leader>to :!touch 
+nnoremap <Leader>mv :!mv 
 nnoremap <Leader>nd :!node %<cr>
 nnoremap <Leader>py :!python3 %<cr>
 nnoremap <Leader>ja :!java %<cr>

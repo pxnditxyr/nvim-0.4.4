@@ -10,6 +10,26 @@ int main()
 }
 endsnippet
 
+snippet tempc "Template C++" i
+#include<bits/stdc++.h>
+
+using namespace std;
+
+void solve () {
+    $2
+}
+
+int main()
+{
+    ios::sync_with_stdio( false );
+    cin.tie( NULL );
+
+    $1
+
+    return 0;
+}
+endsnippet
+
 snippet inc "Include c++" i
 #include<${1:bits/stdc++}.h>
 endsnippet

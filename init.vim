@@ -50,7 +50,7 @@ set ignorecase
 
 
 "tab of 4 spaces
-set noexpandtab
+set expandtab
 set tabstop=4 shiftwidth=4
 
 "Scheme
@@ -61,7 +61,7 @@ if (has("termguicolors"))
 endif
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
-let g:airline_theme='oceanicnext'
+" let g:airline_theme='oceanicnext'
 " let g:gruvbox_contrast_dark = "hard"
 
 "highlight Normal ctermbg=NONE
@@ -70,6 +70,9 @@ set noshowmode
 
 " React
 "set backupcopy=yes
+
+" Long lines
+set nowrap
 
 "Fonts
 set guifont=Hurmit_Nerd_Font_Mono:h12
